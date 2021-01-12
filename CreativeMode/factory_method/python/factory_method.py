@@ -14,11 +14,11 @@ class Creator(ABC):
         result = f"Creator: The same creator's code has just worked with {product.operation()}"
         return result
 
-class ConcreateCreator1(Creator):
+class ConcreteCreator1(Creator):
     def factory_method(self) -> Product:
         return ConcreateProduct1()
 
-class ConcreateCreator2(Creator):
+class ConcreteCreator2(Creator):
      def factory_method(self) -> Product:
          return ConcreateProduct2()
 
@@ -46,4 +46,5 @@ if __name__ == "__main__":
     print("\n")
 
     print("App: Launched with the ConcreteCreator2.")
+    print("\n")
     client_code(ConcreteCreator2())
